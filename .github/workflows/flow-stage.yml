@@ -1,0 +1,21 @@
+name: flow-stage
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  format:
+    uses: igrek8/github-workflows/.github/workflows/job-format.yml@main
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm ci
+      - run: npm test
+  release:
+    needs: [format, test]
+    uses: igrek8/github-workflows/.github/workflows/job-release.yml@main
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

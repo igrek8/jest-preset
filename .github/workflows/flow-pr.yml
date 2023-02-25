@@ -1,0 +1,9 @@
+name: flow-pr
+
+on: pull_request
+
+jobs:
+  format:
+    uses: igrek8/github-workflows/.github/workflows/job-format.yml@main
+  test:
+    uses: igrek8/github-workflows/.github/workflows/job-test.yml@main

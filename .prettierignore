@@ -1,0 +1,5 @@
+CODEOWNERS
+.gitignore
+.husky
+.npmrc
+.prettierignore

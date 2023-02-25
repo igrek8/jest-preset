@@ -1,0 +1,45 @@
+{
+  "name": "@igrek8/jest-preset",
+  "version": "0.0.0",
+  "license": "MIT",
+  "files": [
+    "jest-preset.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional-config"
+    ]
+  },
+  "release": {
+    "extends": [
+      "@igrek8/semantic-release-config"
+    ]
+  },
+  "prettier": "@igrek8/prettier-config",
+  "scripts": {
+    "format": "prettier --check \"**/*\"",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "ts-jest": "^29",
+    "jest": "^29",
+    "typescript": "^4",
+    "ts-node": "^10",
+    "@types/jest": "^29"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.4.4",
+    "@commitlint/config-conventional": "17.4.4",
+    "@igrek8/prettier-config": "1.0.11",
+    "@igrek8/semantic-release-config": "1.0.11",
+    "@igrek8/tsconfig": "1.0.11",
+    "@types/jest": "29.4.0",
+    "@types/node": "18.14.1",
+    "jest": "29.4.3",
+    "ts-jest": "29.0.5",
+    "ts-node": "10.9.1"
+  }
+}

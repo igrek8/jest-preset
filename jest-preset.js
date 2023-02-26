@@ -1,7 +1,4 @@
-const path = require('path');
 const preset = require('ts-jest/jest-preset');
-
-const cwd = process.cwd();
 
 /** @type {import('jest').Config} */
 module.exports = {
@@ -10,8 +7,7 @@ module.exports = {
   clearMocks: true,
   resetMocks: true,
   restoreMocks: true,
-  rootDir: path.join(cwd, 'src'),
-  coverageDirectory: '<rootDir>/coverage',
+  coverageDirectory: '<rootDir>/../coverage',
   coveragePathIgnorePatterns: ['__fixtures__', '__mocks__', 'index.ts', '.d.ts'],
   collectCoverageFrom: ['<rootDir>/**/*.ts'],
   coverageThreshold: {

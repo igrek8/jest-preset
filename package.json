@@ -31,7 +31,7 @@
     "@types/jest": "^29"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.7.1",
+    "@commitlint/cli": "17.7.2",
     "@commitlint/config-conventional": "17.7.0",
     "@igrek8/prettier-config": "1.0.11",
     "@igrek8/semantic-release-config": "1.0.11",
